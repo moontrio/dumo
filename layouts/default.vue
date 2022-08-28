@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { menus } from '~/constants/menu'
+import { menus } from '~~/constants/menus'
 
 const route = useRoute()
 </script>
@@ -17,6 +17,6 @@ const route = useRoute()
         {{ menu.title }}
       </NuxtLink>
     </header>
-    <slot />
+    <slot role="main" />
   </div>
 </template>
