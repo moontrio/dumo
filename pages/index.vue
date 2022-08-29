@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { getImgUrlWithWidth } from '~/utils/common'
 
-const { result: songs } = await $fetch('/api/home/newSong')
+$fetch('/api/home/newSong')
+// const { result: songs } = await $fetch('/api/home/newSong')
 
 const handleClickCover = () => {
   console.log('click cover')
