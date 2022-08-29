@@ -1,14 +1,20 @@
 <script setup lang="ts">
 import { getImgUrlWithWidth } from '~/utils/common'
 
-$fetch('/api/home/newSong')
-// const { result: songs } = await $fetch('/api/home/newSong')
+const { result: songs } = await $fetch('/api/home/newSong', {
+  params: {
+    realIP: '211.161.244.70',
+  },
+  headers: {
+    'X-Real-IP': '211.161.244.70',
+  },
+})
 
 const handleClickCover = () => {
-  console.log('click cover')
+  // console.log('click cover')
 }
 const handleClickPlay = () => {
-  console.log('click play')
+  // console.log('click play')
 }
 </script>
 
