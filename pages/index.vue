@@ -12,7 +12,7 @@ const handleClickPlay = () => {
 </script>
 
 <template>
-  <div class="children:(max-w-1080px m-auto)">
+  <div class="max-w-1080px min-w-720px m-auto">
     <div class="col-span-full my-6 text-3xl font-semibold">
       最新音乐
     </div>
