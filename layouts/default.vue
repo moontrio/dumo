@@ -5,8 +5,8 @@ const route = useRoute()
 </script>
 
 <template>
-  <div>
-    <header class="flex-center h-64px">
+  <div class="bg-gradient-to-b from-[#fbeee466] to-[#e5d7fb66]">
+    <header class="sticky top-0 z-10 flex-center h-64px bg-white/14 backdrop-blur">
       <NuxtLink
         v-for="menu in menus"
         :key="menu.title"
