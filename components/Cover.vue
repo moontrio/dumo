@@ -2,6 +2,7 @@
 interface Props {
   imgUrl: string
   showShadow?: boolean
+  playBtnClass?: string
 }
 
 interface Emits {
@@ -27,6 +28,7 @@ const emit = defineEmits<Emits>()
 
     <div
       class="cover-btn absolute-center p-2/100 w-1/5 aspect-square text-white bg-white/14 backdrop-blur border border-white/8 rounded-full cursor-pointer"
+      :class="playBtnClass"
       @click="emit('clickPlay')"
     >
       <div class="i-ri-play-fill wh-full" />
@@ -43,11 +45,20 @@ const emit = defineEmits<Emits>()
 
 <style>
 .cover-btn {
+  opacity: 0;
   visibility: hidden;
+
+  transition:
+    opacity 200ms ease-in-out,
+    background 150ms ease-in-out;
 }
 
 .cover:hover .cover-btn {
-  transition: visibility 0.3s ease-in;
+  opacity: 1;
   visibility: visible;
+}
+
+.cover-btn:hover {
+  background: hsla(0, 0%, 100%, .28);
 }
 </style>

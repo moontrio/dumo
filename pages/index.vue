@@ -12,11 +12,11 @@ const handleClickPlay = () => {
 </script>
 
 <template>
-  <div class="max-w-1080px min-w-720px m-auto">
+  <div class="max-w-1080px min-w-720px mx-auto my-6">
     <div class="col-span-full my-6 text-3xl font-semibold">
       最新音乐
     </div>
-    <div class="grid grid-rows-5 grid-cols-2 justify-center gap-6">
+    <div class="grid grid-flow-col grid-rows-5 grid-cols-2 justify-center gap-6">
       <div
         v-for="(song, index) in songs"
         :key="song.id"
@@ -29,6 +29,7 @@ const handleClickPlay = () => {
         <Cover
           class="w-48px rounded-md"
           :img-url="getImgUrlWithWidth(song.picUrl, 360)"
+          play-btn-class="!w-1/2"
           @click-play="handleClickPlay"
           @click-cover="handleClickCover"
         />
@@ -49,6 +50,7 @@ const handleClickPlay = () => {
         <Cover
           class="rounded-2xl"
           :img-url="getImgUrlWithWidth(song.picUrl, 360)"
+          play-btn-class="!w-1/4"
           @click-play="handleClickPlay"
           @click-cover="handleClickCover"
         />
